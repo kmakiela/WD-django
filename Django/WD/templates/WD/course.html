@@ -1,0 +1,12 @@
+<h1>{{ course.topic }}</h1>
+<p>Maximum participants: {{ course.max_participants }}</p>
+{% if plist %}
+    Participant List:
+    <ul>
+    {% for p in plist%}
+        <li><a href="/WD/students/{{ p.student.name }}">{{ p.student.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No participants yet</p>
+{% endif %}

@@ -1,0 +1,10 @@
+<h1>Student list:</h1>
+{% if ss %}
+    <ul>
+    {% for s in ss%}
+        <li><a href="/WD/students/{{ s.name }}">{{ s.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No students registered</p>
+{% endif %}

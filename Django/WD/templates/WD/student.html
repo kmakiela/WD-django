@@ -1,0 +1,17 @@
+<h1>Student {{ s.name }}</h1>
+Birthdate: {{ s.birthdate }}
+{% if clist %}
+    <ul>
+    {% for c in clist%}
+        <li><a href="/WD/courses/{{ c.course.topic }}">{{ c.course.topic }}</a>
+            <ul>
+                <li>Mark: {{ c.mark.value }}</li>
+                <li>Comment: {{ c.mark.comment }}</li>
+                <li>First_attempt: {{ c.mark.first_try }}</li>
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Not enrolled in any course yet</p>
+{% endif %}

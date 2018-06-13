@@ -1,0 +1,10 @@
+<h1>Course list:</h1>
+{% if cs %}
+    <ul>
+    {% for c in cs%}
+        <li><a href="/WD/courses/{{ c.topic }}">{{ c.topic }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No courses yet</p>
+{% endif %}
